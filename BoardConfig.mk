@@ -13,7 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+# Copyright (C) 2018 OrangeFox Recovery Project
+#
 LOCAL_PATH := device/xiaomi/markw
 
 # Architecture
@@ -90,3 +91,6 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 
 # Disable Mouse Cursor
 TW_INPUT_BLACKLIST := "hbtp_vm"
+#
+TW_INCLUDE_FBE := true
+#
