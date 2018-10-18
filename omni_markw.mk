@@ -17,9 +17,26 @@
 # Specify phone tech before including full_phone
 $(call inherit-product, vendor/omni/config/gsm.mk)
 
-$(call inherit-product, device/xiaomi/markw/full_markw.mk)
-
 # Inherit some common Omni stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Inherit Telephony packages
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit language packages
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := markw
 PRODUCT_NAME := omni_markw
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Redmi 4
+PRODUCT_MANUFACTURER := Xiaomi
+
+TARGET_VENDOR_PRODUCT_NAME := markw
+TARGET_VENDOR_DEVICE_NAME := markw
+PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=markw PRODUCT_NAME=markw

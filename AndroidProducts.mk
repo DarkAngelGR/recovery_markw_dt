@@ -15,5 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/omni_markw.mk \
-	$(LOCAL_DIR)/full_markw.mk
+	$(LOCAL_DIR)/omni_markw.mk
